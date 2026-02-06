@@ -2,7 +2,13 @@ def redact(original_string):
     new_string = ""
     for word in original_string.split(" "):
         # YOUR CODE HERE
+        if word[0].isupper():
+            new_string += "REDACTED "
+        else:
+            new_string += word + " "
     return new_string
+
+
 
 eb_bio = "Erin came to Kehillah after getting her PhD in Cognitive Science \
 from Stanford University, where she worked on projects in Natural Language \
